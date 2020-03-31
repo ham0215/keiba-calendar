@@ -1,3 +1,5 @@
+// 元ネタ
+// http://www.jra.go.jp/datafile/seiseki/replay/2020/g1.html
 module.exports.keibaCalendar = [
   {
     date: "20200223",
