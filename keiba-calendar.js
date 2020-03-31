@@ -7,7 +7,7 @@ module.exports.keibaCalendar = [
     course: "ダ1,600メートル"
   },
   {
-    date: "2020039",
+    date: "20200329",
     place: "中京",
     name: "高松宮記念",
     conditions: "4歳以上",
