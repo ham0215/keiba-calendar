@@ -13,9 +13,11 @@ const client = new line.Client(config);
 
 exports.sendLine = (pubSubEvent, context) => {
   const today = dayjs().format("YYYYMMDD");
+  console.log(today);
   const keiba = keibaCalendar.find(cal => {
     return cal.date === today;
   });
+  console.log(keiba);
 
   if (!keiba) return;
 
