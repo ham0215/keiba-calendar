@@ -1,7 +1,8 @@
 "use strict";
 
 const line = require("@line/bot-sdk");
-const crypto = require("crypto");
+const dayjs = require("dayjs");
+const keibaCalendar = require("./keiba-calendar").keibaCalendar;
 
 const config = {
   channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN,
@@ -10,27 +11,9 @@ const config = {
 
 const client = new line.Client(config);
 
-const calendar = [
-  {
-    date: "20200401",
-    place: "阪神",
-    name: "大阪杯",
-    conditions: "4歳以上",
-    course: "芝2,000メートル"
-  },
-  {
-    date: "20200406",
-    place: "阪神",
-    name: "大阪杯",
-    conditions: "4歳以上",
-    course: "芝2,000メートル"
-  }
-];
-
 exports.sendLine = (pubSubEvent, context) => {
   const today = dayjs().format("YYYYMMDD");
-
-  const keiba = calendar.find(cal => {
+  const keiba = keibaCalendar.find(cal => {
     return cal.date === today;
   });
 
