@@ -2,6 +2,7 @@
 
 const line = require("@line/bot-sdk");
 const dayjs = require("dayjs");
+require("dayjs/locale/ja");
 const keibaCalendar = require("./keiba-calendar").keibaCalendar;
 
 const config = {
@@ -12,7 +13,9 @@ const config = {
 const client = new line.Client(config);
 
 exports.sendLine = (pubSubEvent, context) => {
-  const today = dayjs().format("YYYYMMDD");
+  const today = dayjs()
+    .locale("ja")
+    .format("YYYYMMDD");
   console.log(today);
   const keiba = keibaCalendar.find(cal => {
     return cal.date === today;
