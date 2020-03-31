@@ -12,7 +12,10 @@ const client = new line.Client(config);
 
 exports.sendLine = (pubSubEvent, context) => {
 
-  let message = 'hogehoge';
+  const message = {
+    type: 'text',
+    text: 'hogehoge'
+  };
 
   client.pushMessage(process.env.group_id, message).then(() => {
     console.log('push message done');
