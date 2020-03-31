@@ -1,0 +1,26 @@
+{
+  "name": "keiba-calendar",
+  "version": "1.0.0",
+  "description": "This is keiba notification to Line.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ham0215/keiba-calendar.git"
+  },
+  "author": "ham",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ham0215/keiba-calendar/issues"
+  },
+  "homepage": "https://github.com/ham0215/keiba-calendar#readme",
+  "dependencies": {
+    "@google-cloud/pubsub": "^1.7.0",
+    "@line/bot-sdk": "^6.8.4"
+  },
+  "devDependencies": {
+    "@google-cloud/functions-framework": "^1.5.0"
+  }
+}
