@@ -27,7 +27,7 @@ exports.sendLine = (pubSubEvent, context) => {
 
   const message = {
     type: "text",
-    text: `今日は${keiba.place}競馬場で${keiba.name}が開催されます。\n${keiba.conditions}\n${keiba.course}`
+    text: `[テスト配信]\n今日は${keiba.place}競馬場で${keiba.name}が開催されます。\n${keiba.conditions}\n${keiba.course}`
   };
 
   client
