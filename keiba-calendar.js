@@ -165,16 +165,9 @@ module.exports.keibaCalendar = [
   {
     date: "20201226",
     place: "中山",
-    name: "中山大障害",
-    conditions: "3歳以上",
-    course: "障4,100メートル"
-  },
-  {
-    date: "20201226",
-    place: "中山",
-    name: "ホープフルS",
-    conditions: "2歳牡・牝",
-    course: "芝2,000メートル"
+    name: "中山大障害,ホープフルS",
+    conditions: "3歳以上,2歳牡・牝",
+    course: "障4,100メートル,芝2,000メートル"
   },
   {
     date: "20201227",

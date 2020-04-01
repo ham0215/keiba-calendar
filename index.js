@@ -14,8 +14,9 @@ const client = new line.Client(config);
 
 exports.sendLine = (pubSubEvent, context) => {
   const today = dayjs()
-    .locale("ja")
+    .add(9, "hour")
     .format("YYYYMMDD");
+  console.log(dayjs().add(9, "hour"));
   console.log(today);
   const keiba = keibaCalendar.find(cal => {
     return cal.date === today;
