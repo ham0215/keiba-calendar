@@ -30,13 +30,6 @@ module.exports.keibaCalendar = [
     course: "芝1,600メートル"
   },
   {
-    date: "20200418",
-    place: "中山",
-    name: "中山グランドジャンプ",
-    conditions: "4歳以上",
-    course: "障4,250メートル"
-  },
-  {
     date: "20200419",
     place: "中山",
     name: "皐月賞",
@@ -165,9 +158,9 @@ module.exports.keibaCalendar = [
   {
     date: "20201226",
     place: "中山",
-    name: "中山大障害,ホープフルS",
-    conditions: "3歳以上,2歳牡・牝",
-    course: "障4,100メートル,芝2,000メートル"
+    name: "ホープフルS",
+    conditions: "2歳牡・牝",
+    course: "芝2,000メートル"
   },
   {
     date: "20201227",
