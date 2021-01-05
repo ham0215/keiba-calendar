@@ -29,6 +29,12 @@ exports.sendLine = (pubSubEvent, context) => {
     type: "text",
     text: `今日は${keiba.place}競馬場で${keiba.name}が開催されます。\n${keiba.conditions}\n${keiba.course}`
   };
+  if (today === '20210106') {
+    message = {
+      type: "text",
+      text: `明けましておめでとうございます！今年もよろしくお願いいたします！！`
+    };
+  }
 
   client
     .pushMessage(process.env.group_id, message)
