@@ -1,5 +1,5 @@
 // 元ネタ
-https://www.jra.go.jp/datafile/seiseki/replay/2021/g1.html
+// https://www.jra.go.jp/datafile/seiseki/replay/2021/g1.html
 module.exports.keibaCalendar = [
   {
     date: "20210221",
