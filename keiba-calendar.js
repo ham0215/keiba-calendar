@@ -2,6 +2,13 @@
 // https://www.jra.go.jp/datafile/seiseki/replay/2021/g1.html
 module.exports.keibaCalendar = [
   {
+    date: "20210106",
+    place: "東京",
+    name: "競馬Run",
+    conditions: "36歳男性",
+    course: "ダ1,600メートル"
+  },
+  {
     date: "20210221",
     place: "東京",
     name: "フェブラリーS",
