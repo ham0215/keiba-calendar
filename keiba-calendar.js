@@ -93,7 +93,7 @@ module.exports.keibaCalendar = [
     course: "芝1,200メートル"
   },
   {
-    date: "2021107",
+    date: "20211017",
     place: "京都",
     name: "秋華賞",
     conditions: "3歳牝",
