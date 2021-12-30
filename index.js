@@ -21,21 +21,24 @@ exports.sendLine = (pubSubEvent, context) => {
   const keiba = keibaCalendar.find(cal => {
     return cal.date === today;
   });
-  console.log(keiba);
 
-  if (!keiba) return;
-
-  let message = {
-    type: "text",
-    text: `今日は${keiba.place}競馬場で${keiba.name}が開催されます。\n${keiba.conditions}\n${keiba.course}`
-  };
-  if (today === '20210111') {
+  let message;
+  if (keiba) {
+    console.log(keiba);
+    message = {
+      type: "text",
+      text: `今日は${keiba.place}競馬場で${keiba.name}が開催されます。\n${keiba.conditions}\n${keiba.course}`
+    };
+  } else if (today === '20220101') {
     message = {
       type: "text",
       text: `明けましておめでとうございます！今年もよろしくお願いいたします！！`
     };
   }
 
+  if (!message) return;
+
+  console.log(message);
   client
     .pushMessage(process.env.group_id, message)
     .then(() => {
