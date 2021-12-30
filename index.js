@@ -29,7 +29,7 @@ exports.sendLine = (pubSubEvent, context) => {
     type: "text",
     text: `今日は${keiba.place}競馬場で${keiba.name}が開催されます。\n${keiba.conditions}\n${keiba.course}`
   };
-  if (today === '20210111') {
+  if (today === '20220101') {
     message = {
       type: "text",
       text: `明けましておめでとうございます！今年もよろしくお願いいたします！！`
