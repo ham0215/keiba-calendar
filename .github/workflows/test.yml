@@ -1,0 +1,22 @@
+name: Test
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+jobs:
+  test:
+    name: Run test
+    runs-on: ubuntu-latest
+    env:
+      CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_ACCESS_TOKEN }}
+      CHANNEL_SECRET: ${{ secrets.LINE_CHANNEL_SECRET }}
+      group_id: ${{ secrets.LINE_USER_ID }}
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          cache: npm
+      - run: npm install
+      - run: node index.js
