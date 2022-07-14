@@ -44,6 +44,7 @@ exports.sendLine = (pubSubEvent, context) => {
   if (!message) return;
 
   console.log(message);
+  console.log(process.env.group_id.slice(0, 5));
   client
     .pushMessage(process.env.group_id, message)
     .then(() => {
