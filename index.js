@@ -29,10 +29,15 @@ exports.sendLine = (pubSubEvent, context) => {
       type: "text",
       text: `今日は${keiba.place}競馬場で${keiba.name}が開催されます。\n${keiba.conditions}\n${keiba.course}`
     };
-  } else if (today === '20220101') {
+  } else if (today === '20230101') {
     message = {
       type: "text",
-      text: `明けましておめでとうございます！今年もよろしくお願いいたします！！`
+      text: "明けましておめでとうございます！今年もよろしくお願いいたします！！"
+    };
+  } else if (process.env.CI) {
+    message = {
+      type: "text",
+      text: "keiba-calendar is running on CI"
     };
   }
 
