@@ -1,0 +1,3 @@
+const sendLine = require("./");
+
+sendLine({}, {});
