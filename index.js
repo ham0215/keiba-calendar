@@ -1,20 +1,15 @@
 "use strict";
 
-console.log("start");
-
 const line = require("@line/bot-sdk");
 const dayjs = require("dayjs");
 require("dayjs/locale/ja");
 const keibaCalendar = require("./keiba-calendar").keibaCalendar;
-
-console.log("create config");
 
 const config = {
   channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN,
   channelSecret: process.env.CHANNEL_SECRET
 };
 
-console.log("create client");
 const client = new line.Client(config);
 
 exports.sendLine = (pubSubEvent, context) => {

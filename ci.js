@@ -1,3 +1,3 @@
-const sendLine = require("./");
+const main = require("./");
 
-sendLine({}, {});
+main.sendLine({}, {});
