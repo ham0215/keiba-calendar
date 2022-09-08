@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/ham0215/keiba-calendar#readme",
   "dependencies": {
-    "@google-cloud/pubsub": "^2.18.4",
+    "@google-cloud/pubsub": "^3.1.1",
     "@line/bot-sdk": "^7.4.0",
     "dayjs": "^1.10.7"
   },
