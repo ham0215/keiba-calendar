@@ -1,5 +1,3 @@
-"use strict";
-
 const app = require('./app.js');
 
 const PORT = parseInt(parseInt(process.env.PORT)) || 8080;
