@@ -6,13 +6,6 @@ const dayjs = require("dayjs");
 require("dayjs/locale/ja");
 const keibaCalendar = require("./keiba-calendar").keibaCalendar;
 
-const config = {
-  channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN,
-  channelSecret: process.env.CHANNEL_SECRET
-};
-
-const client = new line.Client(config);
-
 const app = express();
 app.use(express.json());
 
@@ -49,6 +42,13 @@ app.post('/', async (req, res) => {
     if (!lineMessage) {
       return res.status(204).send('No Content');
     }
+
+    const config = {
+      channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN,
+      channelSecret: process.env.CHANNEL_SECRET
+    };
+
+    const client = new line.Client(config);
 
     // LINE メッセージの送信
     console.log("Sending message:", lineMessage);
