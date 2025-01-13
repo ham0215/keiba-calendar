@@ -29,6 +29,11 @@ exports.sendLine = (pubSubEvent, context) => {
       type: "text",
       text: `今日は${keiba.place}競馬場で${keiba.name}が開催されます。\n${keiba.conditions}\n${keiba.course}`
     };
+  } else if (today === '20250113') {
+    message = {
+      type: "text",
+      text: "ハネダユルサナイ。(一回しか送られないでくれ...!)"
+    };
   } else if (process.env.CI) {
     message = {
       type: "text",
