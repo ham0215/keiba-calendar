@@ -23,7 +23,8 @@
   "dependencies": {
     "@google-cloud/pubsub": "4.9.0",
     "@line/bot-sdk": "9.5.0",
-    "dayjs": "1.11.13"
+    "dayjs": "1.11.13",
+    "express": "4.21.2"
   },
   "devDependencies": {
     "@google-cloud/functions-framework": "3.4.5"
