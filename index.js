@@ -52,7 +52,7 @@ app.post('/', async (req, res) => {
 
     // LINE メッセージの送信
     console.log("Sending message:", lineMessage);
-    await client.pushMessage(process.env.group_id, lineMessage);
+    await client.pushMessage(process.env.GROUP_ID, lineMessage);
     console.log('Push message sent successfully.');
     res.status(200).send('Message sent successfully.');
 
