@@ -62,7 +62,7 @@ app.post('/', async (req, res) => {
   }
 });
 
-const PORT = parseInt(parseInt(process.env.PORT)) || 8080;
-app.listen(PORT, () =>
-  console.log(`nodejs-pubsub-tutorial listening on port ${PORT}`)
-);
+const port = process.env.PORT || 8080;
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
+});
