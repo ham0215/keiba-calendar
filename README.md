@@ -10,4 +10,4 @@ access to http://localhost:8080/
 
 # deploy
 
-Use gcp web console.
+When merge to main branch, deploy to Cloud Run.
