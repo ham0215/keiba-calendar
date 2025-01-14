@@ -25,7 +25,7 @@ app.post('/', async (req, res) => {
         type: 'text',
         text: `今日は${keiba.place}競馬場で${keiba.name}が開催されます。\n${keiba.conditions}\n${keiba.course}`,
       };
-    } else if (dateToUse === '20240112') {
+    } else if (today === '20240112') {
       lineMessage = {
         type: 'text',
         text: '遅くなりましたが、今年もよろしくお願いします！',
